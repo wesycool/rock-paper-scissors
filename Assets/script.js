@@ -1,11 +1,8 @@
-var rockBtn = document.querySelector("#rock");
-var paperBtn = document.querySelector("#paper");
-var scissorsBtn = document.querySelector("#scissors");
-
 var myScore = {win:0,lose:0,tie:0};
+var arrayChoice = ['rock', 'paper', 'scissors'];
 
 function playRPS(myChoice) {
-    var randomChoice = ['rock', 'paper', 'scissors'][Math.floor(Math.random()*3)];
+    var randomChoice = arrayChoice[Math.floor(Math.random()*3)];
     var results = (myChoice == randomChoice)? "tie" : ['rockscissors','paperrock','scissorspaper'].includes(myChoice+randomChoice)? "win" : "lose";
     myScore[results]++;
 
@@ -14,6 +11,4 @@ function playRPS(myChoice) {
     document.getElementById(results).textContent = myScore[results];
 }
 
-rockBtn.addEventListener("click", function(){playRPS('rock')});
-paperBtn.addEventListener("click", function(){playRPS('paper')});
-scissorsBtn.addEventListener("click", function(){playRPS('scissors')});
+arrayChoice.forEach(value => document.querySelector(`#${value}`).addEventListener("click", function(){playRPS(value)}));
