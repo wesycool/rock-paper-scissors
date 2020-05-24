@@ -3,7 +3,7 @@ var arrayChoice = ['rock', 'paper', 'scissors'];
 
 function playRPS(myChoice) {
     var randomChoice = arrayChoice[Math.floor(Math.random()*3)];
-    var results = (myChoice == randomChoice)? "tie" : ['rockscissors','paperrock','scissorspaper'].includes(myChoice+randomChoice)? "win" : "lose";
+    var results = (myChoice == randomChoice)? "tie" : ['rs','pr','sp'].includes(myChoice[0]+randomChoice[0])? "win" : "lose";
     myScore[results]++;
 
     document.getElementById('rps').style.backgroundImage = `url(./Assets/${randomChoice}.png)`;
