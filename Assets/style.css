@@ -1,0 +1,40 @@
+h1 {
+    font-size: xx-large !important;
+}
+
+ol{
+    text-align: initial; 
+    padding-inline-start: 10px;
+}
+
+.row{
+    margin-top: 15px;
+    text-align: center;
+}
+
+
+.play {
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.btn{
+    width: 100px;
+    height: 100px;
+}
+
+#rps{
+    background-image: url(./rps.png);
+    background-color: #f8f9fa;
+    display: inline-block;
+    width: 250px;
+    height: 250px;
+}
+
+@media screen and (max-width: 414px){
+    .btn{
+        width: 25vw;
+        height: 25vw;
+    }
+}

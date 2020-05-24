@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <link rel="stylesheet" href="./Assets/style.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+
+</head>
+<body>
+
+    <div class="container">
+        
+        <div class="row">
+            <div class="col">
+                <h1>Rock Paper Scissors</h1>
+
+                <p>Win: <span id='win'>0</span> Lose: <span id='lose'>0</span> Tie: <span id='tie'>0</span></p>
+
+                <div class='play' id='rps'></div>
+               
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-4 col-md-2 offset-md-3">
+                <button class='btn btn-light play' id='rock' type="submit" style="background-image: url(./Assets/r.png);"></button>
+                <p>Rock</p>
+            </div>
+            <div class="col-4 col-md-2">
+                <button class='btn btn-light play' id='paper' type="submit" style="background-image: url(./Assets/p.png);"></button>
+                <p>Paper</p>
+            </div>
+            <div class="col-4 col-md-2">
+                <button class='btn btn-light play' id='scissors' type="submit" style="background-image: url(./Assets/s.png);"></button>
+                <p>Scissors</p>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class='col col-md-6 offset-md-3'>
+                <ol id='list'></ol>
+            </div>
+        </div>
+        
+    </div>
+    
+
+    <script src="./Assets/script.js"></script>
+</body>
+</html>
