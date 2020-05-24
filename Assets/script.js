@@ -9,7 +9,7 @@ function playRPS(myChoice) {
     var results = (myChoice == randomChoice)? "tie" : ['rockscissors','paperrock','scissorspaper'].includes(myChoice+randomChoice)? "win" : "lose";
     myScore[results]++;
 
-    document.getElementById('rps').style.backgroundImage = `url(./Assets/${randomChoice[0]}.png)`;
+    document.getElementById('rps').style.backgroundImage = `url(./Assets/${randomChoice}.png)`;
     document.getElementById('list').innerHTML += `<li>Player: ${myChoice} - Computer: ${randomChoice} - You ${results}</li>`
     document.getElementById(results).textContent = myScore[results];
 }
